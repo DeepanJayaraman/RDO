@@ -1,4 +1,4 @@
-load('optimum_robust_100000_samples_test.mat','fval','fval_lmom')
+load('optimum_robust_1000000_samples_test.mat','fval','fval_lmom')
 
 fval_pop = fval; fval_lmom_pop = fval_lmom;
 
@@ -13,22 +13,22 @@ for i = 1:length(NN)
         case 10
             fval_10 = fval./fval_pop; fval_ext_10 = fval_ext./fval_pop;
             fval_lmom_10 = fval_lmom./fval_lmom_pop; fval_lmom_ext_10 = fval_lmom_ext./fval_lmom_pop;
-            V_10 = [fval_10 fval_lmom_10 fval_ext_10 fval_lmom_ext_10];
+            V_10 = [fval_ext_10 fval_lmom_ext_10 fval_10 fval_lmom_10 ];
             
         case 25
             fval_25 = fval./fval_pop; fval_ext_25 = fval_ext./fval_pop;
             fval_lmom_25 = fval_lmom./fval_lmom_pop; fval_lmom_ext_25 = fval_lmom_ext./fval_lmom_pop;
-            V_25 = [fval_25 fval_lmom_25 fval_ext_25 fval_lmom_ext_25];
+            V_25 = [fval_ext_25 fval_lmom_ext_25 fval_25 fval_lmom_25 ];
             
         case 50
             fval_50 = fval./fval_pop; fval_ext_50 = fval_ext./fval_pop;
             fval_lmom_50 = fval_lmom./fval_lmom_pop; fval_lmom_ext_50 = fval_lmom_ext./fval_lmom_pop;
-            V_50 = [fval_50 fval_lmom_50 fval_ext_50 fval_lmom_ext_50];
+            V_50 = [fval_ext_50 fval_lmom_ext_50 fval_50 fval_lmom_50 ];
             
         case 100
             fval_100 = fval./fval_pop; fval_ext_100 = fval_ext./fval_pop;
             fval_lmom_100 = fval_lmom./fval_lmom_pop; fval_lmom_ext_100 = fval_lmom_ext./fval_lmom_pop;
-            V_100 = [fval_100 fval_lmom_100 fval_ext_100 fval_lmom_ext_100];
+            V_100 = [fval_ext_100 fval_lmom_ext_100 fval_100 fval_lmom_100 ];
     end
     
 end
