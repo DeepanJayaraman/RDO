@@ -1,2 +1,0 @@
-# RDO
-Robust design optimization
